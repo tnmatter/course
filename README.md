@@ -17,7 +17,7 @@
 2. Прописываем локальный домен в hosts файл
 
 ```
-127.0.0.1 coursework.loc
+127.0.0.1 course.loc
 ```
 
 ### Без докера
@@ -43,7 +43,7 @@
 
 2. Так как вся работа Yii2 теперь связана с PHP контейнером, удобно будет добавить в систему алиас, для удобства работы с докером.
    ```
-   alias dphp='docker exec -it coursework-php-container'
+   alias dphp='docker exec -it course-php-container'
    ```
 
    Теперь вызов всех команд в Yii2 будет выглядеть так:
@@ -62,7 +62,7 @@
 
 4. Прописываем юзера в бд и создаем бд
    ```
-   docker exec -it coursework-postgres-container sh /docker-entrypoint-initdb.d/init-database-and-role.sh
+   docker exec -it course-postgres-container sh /docker-entrypoint-initdb.d/init-database-and-role.sh
    ```
 
 ## После установки

@@ -13,7 +13,7 @@ $config = [
         '@npm' => '@vendor/npm-asset',
         '@tests' => '@app/tests',
         '@App' => '@app',
-        '@site' => 'https://coursework.net',
+        '@site' => 'https://course.net',
     ],
     'components' => [
         'cache' => [

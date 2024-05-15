@@ -10,7 +10,7 @@ $config = [
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm' => '@vendor/npm-asset',
-        '@site' => 'https://coursework.net',
+        '@site' => 'https://course.net',
     ],
     'components' => [
         'cache' => [
