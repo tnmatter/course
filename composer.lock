@@ -75,13 +75,13 @@
       "version": "6.x-dev",
       "source": {
         "type": "git",
-        "url": "git@github.com:FortAwesome/Font-Awesome.git",
-        "reference": "d02961b018153506364077343b0edcde0a39d27e"
+        "url": "https://github.com/FortAwesome/Font-Awesome.git",
+        "reference": "c0f460dca7f7688761120415ff3c9cf7f73119be"
       },
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/d02961b018153506364077343b0edcde0a39d27e",
-        "reference": "d02961b018153506364077343b0edcde0a39d27e"
+        "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/c0f460dca7f7688761120415ff3c9cf7f73119be",
+        "reference": "c0f460dca7f7688761120415ff3c9cf7f73119be"
       },
       "type": "bower-asset"
     },
@@ -90,13 +90,13 @@
       "version": "5.x-dev",
       "source": {
         "type": "git",
-        "url": "git@github.com:RobinHerbots/Inputmask.git",
-        "reference": "5069a1acaf2682401b92ea500a35dfc5314b83dc"
+        "url": "https://github.com/RobinHerbots/Inputmask.git",
+        "reference": "25465ad0e06d7269f5276677b641ffffee5c68e6"
       },
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/RobinHerbots/Inputmask/zipball/5069a1acaf2682401b92ea500a35dfc5314b83dc",
-        "reference": "5069a1acaf2682401b92ea500a35dfc5314b83dc"
+        "url": "https://api.github.com/repos/RobinHerbots/Inputmask/zipball/25465ad0e06d7269f5276677b641ffffee5c68e6",
+        "reference": "25465ad0e06d7269f5276677b641ffffee5c68e6"
       },
       "require": {
         "bower-asset/jquery": ">=1.7"
@@ -1078,73 +1078,73 @@
         "source": "https://github.com/kartik-v/yii2-widget-depdrop/tree/master"
       },
       "time": "2019-05-25T07:32:15+00:00"
-        },
+    },
+    {
+      "name": "kartik-v/yii2-widget-fileinput",
+      "version": "dev-master",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/kartik-v/yii2-widget-fileinput.git",
+        "reference": "b5500b6855526837154694c2afab8dbc3afc8abd"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/kartik-v/yii2-widget-fileinput/zipball/b5500b6855526837154694c2afab8dbc3afc8abd",
+        "reference": "b5500b6855526837154694c2afab8dbc3afc8abd",
+        "shasum": ""
+      },
+      "require": {
+        "kartik-v/bootstrap-fileinput": ">=5.5.0",
+        "kartik-v/yii2-krajee-base": ">=3.0.5"
+      },
+      "default-branch": true,
+      "type": "yii2-extension",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "1.1.x-dev"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "kartik\\file\\": "src"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "authors": [
         {
-          "name": "kartik-v/yii2-widget-fileinput",
-          "version": "dev-master",
-          "source": {
-            "type": "git",
-            "url": "https://github.com/kartik-v/yii2-widget-fileinput.git",
-            "reference": "b5500b6855526837154694c2afab8dbc3afc8abd"
-          },
-          "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/kartik-v/yii2-widget-fileinput/zipball/b5500b6855526837154694c2afab8dbc3afc8abd",
-            "reference": "b5500b6855526837154694c2afab8dbc3afc8abd",
-            "shasum": ""
-          },
-          "require": {
-            "kartik-v/bootstrap-fileinput": ">=5.5.0",
-            "kartik-v/yii2-krajee-base": ">=3.0.5"
-          },
-          "default-branch": true,
-          "type": "yii2-extension",
-          "extra": {
-            "branch-alias": {
-              "dev-master": "1.1.x-dev"
-            }
-          },
-          "autoload": {
-            "psr-4": {
-              "kartik\\file\\": "src"
-            }
-          },
-          "notification-url": "https://packagist.org/downloads/",
-          "license": [
-            "BSD-3-Clause"
-          ],
-          "authors": [
-            {
-              "name": "Kartik Visweswaran",
-              "email": "kartikv2@gmail.com",
-              "homepage": "http://www.krajee.com/"
-            }
-          ],
-          "description": "An enhanced FileInput widget for Bootstrap 3.x, 4.x & 5.x with file preview, multiple selection, and more features (sub repo split from yii2-widgets)",
-          "homepage": "https://github.com/kartik-v/yii2-widget-fileinput",
-          "keywords": [
-            "extension",
-            "file",
-            "form",
-            "input",
-            "jquery",
-            "plugin",
-            "upload",
-            "widget",
-            "yii2"
-          ],
-          "support": {
-            "issues": "https://github.com/kartik-v/yii2-widget-fileinput/issues",
-            "source": "https://github.com/kartik-v/yii2-widget-fileinput/tree/v1.1.1"
-          },
-          "funding": [
-            {
-              "url": "https://opencollective.com/yii2-widget-fileinput",
-              "type": "open_collective"
-            }
-          ],
-          "time": "2022-06-28T04:31:04+00:00"
-        },
+          "name": "Kartik Visweswaran",
+          "email": "kartikv2@gmail.com",
+          "homepage": "http://www.krajee.com/"
+        }
+      ],
+      "description": "An enhanced FileInput widget for Bootstrap 3.x, 4.x & 5.x with file preview, multiple selection, and more features (sub repo split from yii2-widgets)",
+      "homepage": "https://github.com/kartik-v/yii2-widget-fileinput",
+      "keywords": [
+        "extension",
+        "file",
+        "form",
+        "input",
+        "jquery",
+        "plugin",
+        "upload",
+        "widget",
+        "yii2"
+      ],
+      "support": {
+        "issues": "https://github.com/kartik-v/yii2-widget-fileinput/issues",
+        "source": "https://github.com/kartik-v/yii2-widget-fileinput/tree/v1.1.1"
+      },
+      "funding": [
+        {
+          "url": "https://opencollective.com/yii2-widget-fileinput",
+          "type": "open_collective"
+        }
+      ],
+      "time": "2022-06-28T04:31:04+00:00"
+    },
     {
       "name": "kartik-v/yii2-widget-growl",
       "version": "dev-master",
@@ -1203,192 +1203,192 @@
         "source": "https://github.com/kartik-v/yii2-widget-growl/tree/master"
       },
       "time": "2021-10-28T04:21:15+00:00"
-        },
+    },
+    {
+      "name": "kartik-v/yii2-widget-rangeinput",
+      "version": "dev-master",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/kartik-v/yii2-widget-rangeinput.git",
+        "reference": "c27f7c90299df5707fdd35ef2617042ce32b891c"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/kartik-v/yii2-widget-rangeinput/zipball/c27f7c90299df5707fdd35ef2617042ce32b891c",
+        "reference": "c27f7c90299df5707fdd35ef2617042ce32b891c",
+        "shasum": ""
+      },
+      "require": {
+        "kartik-v/yii2-krajee-base": ">=1.9"
+      },
+      "default-branch": true,
+      "type": "yii2-extension",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "1.0.x-dev"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "kartik\\range\\": "src"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "authors": [
         {
-          "name": "kartik-v/yii2-widget-rangeinput",
-          "version": "dev-master",
-          "source": {
-            "type": "git",
-            "url": "https://github.com/kartik-v/yii2-widget-rangeinput.git",
-            "reference": "c27f7c90299df5707fdd35ef2617042ce32b891c"
-          },
-          "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/kartik-v/yii2-widget-rangeinput/zipball/c27f7c90299df5707fdd35ef2617042ce32b891c",
-            "reference": "c27f7c90299df5707fdd35ef2617042ce32b891c",
-            "shasum": ""
-          },
-          "require": {
-            "kartik-v/yii2-krajee-base": ">=1.9"
-          },
-          "default-branch": true,
-          "type": "yii2-extension",
-          "extra": {
-            "branch-alias": {
-              "dev-master": "1.0.x-dev"
-            }
-          },
-          "autoload": {
-            "psr-4": {
-              "kartik\\range\\": "src"
-            }
-          },
-          "notification-url": "https://packagist.org/downloads/",
-          "license": [
-            "BSD-3-Clause"
-          ],
-          "authors": [
-            {
-              "name": "Kartik Visweswaran",
-              "email": "kartikv2@gmail.com",
-              "homepage": "http://www.krajee.com/"
-            }
-          ],
-          "description": "An enhanced Yii 2 widget encapsulating the HTML 5 range input (sub repo split from yii2-widgets)",
-          "homepage": "https://github.com/kartik-v/yii2-widget-rangeinput",
-          "keywords": [
-            "HTML5",
-            "extension",
-            "form",
-            "input",
-            "jquery",
-            "plugin",
-            "range",
-            "widget",
-            "yii2"
-          ],
-          "support": {
-            "issues": "https://github.com/kartik-v/yii2-widget-rangeinput/issues",
-            "source": "https://github.com/kartik-v/yii2-widget-rangeinput/tree/master"
-          },
-          "time": "2018-11-05T12:34:11+00:00"
-        },
+          "name": "Kartik Visweswaran",
+          "email": "kartikv2@gmail.com",
+          "homepage": "http://www.krajee.com/"
+        }
+      ],
+      "description": "An enhanced Yii 2 widget encapsulating the HTML 5 range input (sub repo split from yii2-widgets)",
+      "homepage": "https://github.com/kartik-v/yii2-widget-rangeinput",
+      "keywords": [
+        "HTML5",
+        "extension",
+        "form",
+        "input",
+        "jquery",
+        "plugin",
+        "range",
+        "widget",
+        "yii2"
+      ],
+      "support": {
+        "issues": "https://github.com/kartik-v/yii2-widget-rangeinput/issues",
+        "source": "https://github.com/kartik-v/yii2-widget-rangeinput/tree/master"
+      },
+      "time": "2018-11-05T12:34:11+00:00"
+    },
+    {
+      "name": "kartik-v/yii2-widget-rating",
+      "version": "dev-master",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/kartik-v/yii2-widget-rating.git",
+        "reference": "d3d7249490044f80e65f8f3938191f39a76586b2"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/kartik-v/yii2-widget-rating/zipball/d3d7249490044f80e65f8f3938191f39a76586b2",
+        "reference": "d3d7249490044f80e65f8f3938191f39a76586b2",
+        "shasum": ""
+      },
+      "require": {
+        "kartik-v/bootstrap-star-rating": "~4.0",
+        "kartik-v/yii2-krajee-base": ">=1.9"
+      },
+      "default-branch": true,
+      "type": "yii2-extension",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "1.0.x-dev"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "kartik\\rating\\": "src"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "authors": [
         {
-          "name": "kartik-v/yii2-widget-rating",
-          "version": "dev-master",
-          "source": {
-            "type": "git",
-            "url": "https://github.com/kartik-v/yii2-widget-rating.git",
-            "reference": "d3d7249490044f80e65f8f3938191f39a76586b2"
-          },
-          "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/kartik-v/yii2-widget-rating/zipball/d3d7249490044f80e65f8f3938191f39a76586b2",
-            "reference": "d3d7249490044f80e65f8f3938191f39a76586b2",
-            "shasum": ""
-          },
-          "require": {
-            "kartik-v/bootstrap-star-rating": "~4.0",
-            "kartik-v/yii2-krajee-base": ">=1.9"
-          },
-          "default-branch": true,
-          "type": "yii2-extension",
-          "extra": {
-            "branch-alias": {
-              "dev-master": "1.0.x-dev"
-            }
-          },
-          "autoload": {
-            "psr-4": {
-              "kartik\\rating\\": "src"
-            }
-          },
-          "notification-url": "https://packagist.org/downloads/",
-          "license": [
-            "BSD-3-Clause"
-          ],
-          "authors": [
-            {
-              "name": "Kartik Visweswaran",
-              "email": "kartikv2@gmail.com",
-              "homepage": "http://www.krajee.com/"
-            }
-          ],
-          "description": "A Yii2 widget for the simple yet powerful bootstrap-star-rating plugin with fractional rating support (sub repo split from yii2-widgets)",
-          "homepage": "https://github.com/kartik-v/yii2-widget-rating",
-          "keywords": [
-            "Rating",
-            "bootstrap",
-            "extension",
-            "form",
-            "input",
-            "jquery",
-            "plugin",
-            "star",
-            "widget",
-            "yii2"
-          ],
-          "support": {
-            "issues": "https://github.com/kartik-v/yii2-widget-rating/issues",
-            "source": "https://github.com/kartik-v/yii2-widget-rating/tree/v1.0.5"
-          },
-          "time": "2021-11-20T05:26:05+00:00"
-        },
+          "name": "Kartik Visweswaran",
+          "email": "kartikv2@gmail.com",
+          "homepage": "http://www.krajee.com/"
+        }
+      ],
+      "description": "A Yii2 widget for the simple yet powerful bootstrap-star-rating plugin with fractional rating support (sub repo split from yii2-widgets)",
+      "homepage": "https://github.com/kartik-v/yii2-widget-rating",
+      "keywords": [
+        "Rating",
+        "bootstrap",
+        "extension",
+        "form",
+        "input",
+        "jquery",
+        "plugin",
+        "star",
+        "widget",
+        "yii2"
+      ],
+      "support": {
+        "issues": "https://github.com/kartik-v/yii2-widget-rating/issues",
+        "source": "https://github.com/kartik-v/yii2-widget-rating/tree/v1.0.5"
+      },
+      "time": "2021-11-20T05:26:05+00:00"
+    },
+    {
+      "name": "kartik-v/yii2-widget-select2",
+      "version": "dev-master",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/kartik-v/yii2-widget-select2.git",
+        "reference": "4b8ef7dd9780531fc997fa23a53a38a1f7674bec"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/kartik-v/yii2-widget-select2/zipball/4b8ef7dd9780531fc997fa23a53a38a1f7674bec",
+        "reference": "4b8ef7dd9780531fc997fa23a53a38a1f7674bec",
+        "shasum": ""
+      },
+      "require": {
+        "kartik-v/yii2-krajee-base": ">=3.0.4",
+        "select2/select2": ">=4.0.0"
+      },
+      "default-branch": true,
+      "type": "yii2-extension",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "2.2.x-dev"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "kartik\\select2\\": "src"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "authors": [
         {
-          "name": "kartik-v/yii2-widget-select2",
-          "version": "dev-master",
-          "source": {
-            "type": "git",
-            "url": "https://github.com/kartik-v/yii2-widget-select2.git",
-            "reference": "4b8ef7dd9780531fc997fa23a53a38a1f7674bec"
-          },
-          "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/kartik-v/yii2-widget-select2/zipball/4b8ef7dd9780531fc997fa23a53a38a1f7674bec",
-            "reference": "4b8ef7dd9780531fc997fa23a53a38a1f7674bec",
-            "shasum": ""
-          },
-          "require": {
-            "kartik-v/yii2-krajee-base": ">=3.0.4",
-            "select2/select2": ">=4.0.0"
-          },
-          "default-branch": true,
-          "type": "yii2-extension",
-          "extra": {
-            "branch-alias": {
-              "dev-master": "2.2.x-dev"
-            }
-          },
-          "autoload": {
-            "psr-4": {
-              "kartik\\select2\\": "src"
-            }
-          },
-          "notification-url": "https://packagist.org/downloads/",
-          "license": [
-            "BSD-3-Clause"
-          ],
-          "authors": [
-            {
-              "name": "Kartik Visweswaran",
-              "email": "kartikv2@gmail.com",
-              "homepage": "http://www.krajee.com/"
-            }
-          ],
-          "description": "Enhanced Yii2 wrapper for the Select2 jQuery plugin (sub repo split from yii2-widgets).",
-          "homepage": "https://github.com/kartik-v/yii2-widget-select2",
-          "keywords": [
-            "dropdown",
-            "extension",
-            "form",
-            "jquery",
-            "plugin",
-            "select2",
-            "widget",
-            "yii2"
-          ],
-          "support": {
-            "issues": "https://github.com/kartik-v/yii2-widget-select2/issues",
-            "source": "https://github.com/kartik-v/yii2-widget-select2/tree/v2.2.5"
-          },
-          "funding": [
-            {
-              "url": "https://opencollective.com/yii2-widget-select2",
-              "type": "open_collective"
-            }
-          ],
-          "time": "2023-06-22T07:43:31+00:00"
-        },
+          "name": "Kartik Visweswaran",
+          "email": "kartikv2@gmail.com",
+          "homepage": "http://www.krajee.com/"
+        }
+      ],
+      "description": "Enhanced Yii2 wrapper for the Select2 jQuery plugin (sub repo split from yii2-widgets).",
+      "homepage": "https://github.com/kartik-v/yii2-widget-select2",
+      "keywords": [
+        "dropdown",
+        "extension",
+        "form",
+        "jquery",
+        "plugin",
+        "select2",
+        "widget",
+        "yii2"
+      ],
+      "support": {
+        "issues": "https://github.com/kartik-v/yii2-widget-select2/issues",
+        "source": "https://github.com/kartik-v/yii2-widget-select2/tree/v2.2.5"
+      },
+      "funding": [
+        {
+          "url": "https://opencollective.com/yii2-widget-select2",
+          "type": "open_collective"
+        }
+      ],
+      "time": "2023-06-22T07:43:31+00:00"
+    },
     {
       "name": "kartik-v/yii2-widget-sidenav",
       "version": "dev-master",
@@ -1743,78 +1743,78 @@
         "source": "https://github.com/kartik-v/yii2-widget-typeahead/tree/master"
       },
       "time": "2021-12-21T05:27:46+00:00"
-        },
+    },
+    {
+      "name": "kartik-v/yii2-widgets",
+      "version": "v3.4.1",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/kartik-v/yii2-widgets.git",
+        "reference": "e5a030d700243a90eccf96a070380bd3b76e17a3"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/kartik-v/yii2-widgets/zipball/e5a030d700243a90eccf96a070380bd3b76e17a3",
+        "reference": "e5a030d700243a90eccf96a070380bd3b76e17a3",
+        "shasum": ""
+      },
+      "require": {
+        "kartik-v/yii2-krajee-base": "*",
+        "kartik-v/yii2-widget-activeform": "*",
+        "kartik-v/yii2-widget-affix": "*",
+        "kartik-v/yii2-widget-alert": "*",
+        "kartik-v/yii2-widget-colorinput": "*",
+        "kartik-v/yii2-widget-datepicker": "*",
+        "kartik-v/yii2-widget-datetimepicker": "*",
+        "kartik-v/yii2-widget-depdrop": "*",
+        "kartik-v/yii2-widget-fileinput": "*",
+        "kartik-v/yii2-widget-growl": "*",
+        "kartik-v/yii2-widget-rangeinput": "*",
+        "kartik-v/yii2-widget-rating": "*",
+        "kartik-v/yii2-widget-select2": "*",
+        "kartik-v/yii2-widget-sidenav": "*",
+        "kartik-v/yii2-widget-spinner": "*",
+        "kartik-v/yii2-widget-switchinput": "*",
+        "kartik-v/yii2-widget-timepicker": "*",
+        "kartik-v/yii2-widget-touchspin": "*",
+        "kartik-v/yii2-widget-typeahead": "*"
+      },
+      "type": "yii2-extension",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "1.0.x-dev"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "kartik\\widgets\\": "src"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "authors": [
         {
-          "name": "kartik-v/yii2-widgets",
-          "version": "v3.4.1",
-          "source": {
-            "type": "git",
-            "url": "https://github.com/kartik-v/yii2-widgets.git",
-            "reference": "e5a030d700243a90eccf96a070380bd3b76e17a3"
-          },
-          "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/kartik-v/yii2-widgets/zipball/e5a030d700243a90eccf96a070380bd3b76e17a3",
-            "reference": "e5a030d700243a90eccf96a070380bd3b76e17a3",
-            "shasum": ""
-          },
-          "require": {
-            "kartik-v/yii2-krajee-base": "*",
-            "kartik-v/yii2-widget-activeform": "*",
-            "kartik-v/yii2-widget-affix": "*",
-            "kartik-v/yii2-widget-alert": "*",
-            "kartik-v/yii2-widget-colorinput": "*",
-            "kartik-v/yii2-widget-datepicker": "*",
-            "kartik-v/yii2-widget-datetimepicker": "*",
-            "kartik-v/yii2-widget-depdrop": "*",
-            "kartik-v/yii2-widget-fileinput": "*",
-            "kartik-v/yii2-widget-growl": "*",
-            "kartik-v/yii2-widget-rangeinput": "*",
-            "kartik-v/yii2-widget-rating": "*",
-            "kartik-v/yii2-widget-select2": "*",
-            "kartik-v/yii2-widget-sidenav": "*",
-            "kartik-v/yii2-widget-spinner": "*",
-            "kartik-v/yii2-widget-switchinput": "*",
-            "kartik-v/yii2-widget-timepicker": "*",
-            "kartik-v/yii2-widget-touchspin": "*",
-            "kartik-v/yii2-widget-typeahead": "*"
-          },
-          "type": "yii2-extension",
-          "extra": {
-            "branch-alias": {
-              "dev-master": "1.0.x-dev"
-            }
-          },
-          "autoload": {
-            "psr-4": {
-              "kartik\\widgets\\": "src"
-            }
-          },
-          "notification-url": "https://packagist.org/downloads/",
-          "license": [
-            "BSD-3-Clause"
-          ],
-          "authors": [
-            {
-              "name": "Kartik Visweswaran",
-              "email": "kartikv2@gmail.com",
-              "homepage": "http://www.krajee.com/"
-            }
-          ],
-          "description": "Collection of useful widgets for Yii Framework 2.0 extending functionalities for Bootstrap",
-          "homepage": "https://github.com/kartik-v/yii2-widgets",
-          "keywords": [
-            "extension",
-            "form",
-            "widget",
-            "yii2"
-          ],
-          "support": {
-            "issues": "https://github.com/kartik-v/yii2-widgets/issues",
-            "source": "https://github.com/kartik-v/yii2-widgets/tree/master"
-          },
-          "time": "2018-10-09T17:40:19+00:00"
-        },
+          "name": "Kartik Visweswaran",
+          "email": "kartikv2@gmail.com",
+          "homepage": "http://www.krajee.com/"
+        }
+      ],
+      "description": "Collection of useful widgets for Yii Framework 2.0 extending functionalities for Bootstrap",
+      "homepage": "https://github.com/kartik-v/yii2-widgets",
+      "keywords": [
+        "extension",
+        "form",
+        "widget",
+        "yii2"
+      ],
+      "support": {
+        "issues": "https://github.com/kartik-v/yii2-widgets/issues",
+        "source": "https://github.com/kartik-v/yii2-widgets/tree/master"
+      },
+      "time": "2018-10-09T17:40:19+00:00"
+    },
     {
       "name": "paragonie/random_compat",
       "version": "dev-master",
@@ -6217,12 +6217,12 @@
       "source": {
         "type": "git",
         "url": "https://github.com/symfony/var-dumper.git",
-        "reference": "be16ed8fa69d9596707fcb2382ea0f71c0825b10"
+        "reference": "eb2c4ea3f2d77730fc5065c92c6ad3f2893ff40d"
       },
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/symfony/var-dumper/zipball/be16ed8fa69d9596707fcb2382ea0f71c0825b10",
-        "reference": "be16ed8fa69d9596707fcb2382ea0f71c0825b10",
+        "url": "https://api.github.com/repos/symfony/var-dumper/zipball/eb2c4ea3f2d77730fc5065c92c6ad3f2893ff40d",
+        "reference": "eb2c4ea3f2d77730fc5065c92c6ad3f2893ff40d",
         "shasum": ""
       },
       "require": {
@@ -6292,7 +6292,7 @@
           "type": "tidelift"
         }
       ],
-      "time": "2024-04-18T09:32:20+00:00"
+      "time": "2024-05-15T06:23:06+00:00"
     },
     {
       "name": "symfony/yaml",

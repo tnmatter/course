@@ -47,7 +47,6 @@ class m240515_203528_all extends Migration
                 'created_at' => $this->timestamp(0)->notNull()->defaultExpression('now()'),
                 'updated_at' => $this->timestamp(0)->notNull()->defaultExpression('now()'),
                 'status' => $this->string(255)->notNull(),
-                'avatar' => $this->string(255),
                 'delivered_at' => $this->timestamp(0),
                 'feedback' => $this->text(),
                 'feedback_assessment' => $this->integer()

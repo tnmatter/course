@@ -8,4 +8,8 @@ class SiteController extends AbstractController
     {
         return $this->render('index');
     }
+
+    public function actionError(): void
+    {
+    }
 }
