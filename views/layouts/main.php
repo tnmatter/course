@@ -37,9 +37,8 @@ $this->beginBody() ?>
             <a href="/" class="text-muted fs-5 link-opacity-hover"><?= Yii::t('app', 'Домой'); ?></a>
         </div>
         <div class="menu">
-            <a class="text-muted link-opacity-hover" href="/projects"><?= Yii::t('app', 'Проекты'); ?></a>
-            <a class="text-muted link-opacity-hover" href="/entries"><?= Yii::t('app', 'Новости'); ?></a>
-            <a class="text-muted link-opacity-hover" href="/project-agents"><?= Yii::t('app', 'Агенты'); ?></a>
+            <a class="text-muted link-opacity-hover" href="/products"><?= Yii::t('app', 'Товары'); ?></a>
+            <a class="text-muted link-opacity-hover" href="/orders"><?= Yii::t('app', 'Заказы'); ?></a>
         </div>
         <div class="menu-mobile">
             <div class="dropdown">
@@ -47,9 +46,8 @@ $this->beginBody() ?>
                     <?= Yii::t('app', 'Меню'); ?>
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="/projects"><?= Yii::t('app', 'Проекты'); ?></a></li>
-                    <li><a class="dropdown-item" href="/entries"><?= Yii::t('app', 'Новости'); ?></a></li>
-                    <li><a class="dropdown-item" href="/project-agents"><?= Yii::t('app', 'Агенты'); ?></a></li>
+                    <li><a class="dropdown-item" href="/products"><?= Yii::t('app', 'Товары'); ?></a></li>
+                    <li><a class="dropdown-item" href="/orders"><?= Yii::t('app', 'Заказы'); ?></a></li>
                 </ul>
             </div>
         </div>
@@ -79,13 +77,10 @@ $this->beginBody() ?>
                         <?= Yii::t('app', 'Меню'); ?>
                     </li>
                     <li class="list-group-item bg-transparent text-muted">
-                        <a href="/projects"><?= Yii::t('app', 'Проекты'); ?></a>
+                        <a href="/products"><?= Yii::t('app', 'Товары'); ?></a>
                     </li>
                     <li class="list-group-item bg-transparent text-muted">
-                        <a href="/entries"><?= Yii::t('app', 'Новости'); ?></a>
-                    </li>
-                    <li class="list-group-item bg-transparent text-muted">
-                        <a href="/project-agents"><?= Yii::t('app', 'Агенты'); ?></a>
+                        <a href="/orders"><?= Yii::t('app', 'Заказы'); ?></a>
                     </li>
                 </ul>
             </div>
