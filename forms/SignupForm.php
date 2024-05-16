@@ -42,8 +42,7 @@ class SignupForm extends Model
         if (mb_strlen($this->password) < $length) {
             $this->addError('password', Yii::t('app', "Пароль должен содержать не менее {cnt} символов", ['cnt' => $length]));
         }
-        $spec = preg_quote('!@#|$%^&*~\'"()+=_-{}[].,');
-        if (!preg_match("/[$spec]/", $this->password)
+        if (!preg_match("/[`!@#$%^&*()_+\-=\[\]{};':\"\\|,.<>\/?~]/", $this->password)
             || !preg_match('/\d/', $this->password)
             || !preg_match('/[a-zа-я]/u', $this->password)
             || !preg_match('/[A-ZА-Я]/u', $this->password)
