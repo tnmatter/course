@@ -10,6 +10,12 @@ use Yii;
  */
 class ErrorAction extends \yii\web\ErrorAction
 {
+    public function run(): string
+    {
+        $this->layout = 'error';
+        return parent::run();
+    }
+
     public function renderAjaxResponse(): string
     {
         if (Yii::$app->getRequest()->headers->get('X-Is-Modal') === 'true') {
