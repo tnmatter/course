@@ -37,5 +37,19 @@ enum OrderStatusEnum: string
             self::Refunded => BootstrapColorClassEnum::Warning,
         };
     }
+
+    public function getAvailableStatuses(): array
+    {
+        return match ($this) {
+            self::Draft => [self::Draft, self::Approved, self::Rejected],
+            self::Approved => [self::Approved, self::Collecting],
+            self::Collecting => [self::Collecting, self::Delivering],
+            self::Delivering => [self::Delivering, self::Delivered, self::Refunded],
+            self::Delivered => [],
+            self::Rejected => [],
+            self::Refunded => [],
+            default => [$this],
+        };
+    }
 }
 

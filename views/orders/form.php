@@ -1,9 +1,14 @@
 <?php
 
+use app\enum\OrderStatusEnum;
+use app\helpers\HEnum;
 use app\models\Order;
 use app\widgets\ActiveForm;
+use app\widgets\DateTimePicker;
 use borales\extensions\phoneInput\PhoneInput;
 use yii\web\View;
+use yii\bootstrap5\Html;
+use tonisormisson\addressform\AddressForm;
 
 /**
  * @var Order $order
@@ -32,10 +37,26 @@ $form = ActiveForm::begin();
                         ); ?>
                     </div>
                     <div class="col-12">
-                        <?= $form->field($order, 'deliver_from')->widget(\app\widgets\DateTimePicker::class) ?>
+                        <?= $form->field($order, 'address')->textInput(); ?>
+                    </div>
+                    <?php if(!$order->isNewRecord) { ?>
+                    <div class="col-12">
+                        <?= $form->field($order, 'status')->widget(
+                            \app\widgets\Select2::class,
+                            [
+                                'data' => HEnum::getCasesList(OrderStatusEnum::class, $order->status?->getAvailableStatuses(), false)
+                            ]
+                        ); ?>
+                    </div>
+                    <?php } ?>
+                    <div class="col-12">
+                        <?= $form->field($order, 'deliver_from')->widget(DateTimePicker::class) ?>
                     </div>
                     <div class="col-12">
-                        <?= $form->field($order, 'deliver_to')->widget(\app\widgets\DateTimePicker::class) ?>
+                        <?= $form->field($order, 'deliver_to')->widget(DateTimePicker::class) ?>
+                    </div>
+                    <div class="col-12">
+                        <?= \app\helpers\HHtml::formButtonGroup(!$order->isNewRecord); ?>
                     </div>
                 </div>
             </div>

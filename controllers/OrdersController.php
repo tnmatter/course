@@ -20,6 +20,7 @@ class OrdersController extends AbstractController
     {
         $order = new Order();
         if ($order->load($this->request->post())) {
+            $order->courier_id = \Yii::$app->user->identity->id;
             $this->performAjaxValidation($order);
             if ($order->save()) {
                 $this->setSaveFlash();

@@ -12,6 +12,13 @@ $config = [
         '@npm' => '@vendor/npm-asset',
         '@site' => 'https://course.net',
     ],
+    'modules' => [
+        //...
+        'addressform' =>[
+            'class' => \tonisormisson\addressform\Module::class,
+        ],
+        //...
+    ],
     'components' => [
         'cache' => [
             'class' => 'yii\caching\FileCache',

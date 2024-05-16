@@ -24,7 +24,6 @@ use yii\db\ActiveQuery;
  * @property DateTimeImmutable|null $delivered_at
  * @property string|null $feedback
  * @property int|null $feedback_assessment
- *
  * @property User $courier
  * @property string $customerPhoneHtml
  */
@@ -38,7 +37,7 @@ class Order extends AbstractPgModel
     public function rules(): array
     {
         return [
-            [['customer_name', 'customer_phone', 'address', 'deliver_from', 'deliver_to', 'courier_id', 'status'], 'required'],
+            [['customer_name', 'customer_phone', 'address', 'deliver_from', 'deliver_to'], 'required'],
             [['customer_name', 'address'], 'string', 'max' => 255],
             [['customer_phone'], PhoneInputValidator::class],
             [['deliver_from', 'deliver_to', 'delivered_at'], TypeValidator::class, 'type' => DateTimeImmutable::class],
