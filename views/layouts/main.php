@@ -48,8 +48,13 @@ $this->beginBody() ?>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="/products"><?= Yii::t('app', 'Товары'); ?></a></li>
                     <li><a class="dropdown-item" href="/orders"><?= Yii::t('app', 'Заказы'); ?></a></li>
+                    <hr>
+                    <li><a class="dropdown-item text-danger-emphasis" href="/site/logout"><?= Yii::t('app', 'Выйти'); ?></a></li>
                 </ul>
             </div>
+        </div>
+        <div class="menu__logout">
+            <a class="text-danger-emphasis link-opacity-hover" href="/site/logout"><?= Yii::t('app', 'Выйти'); ?></a>
         </div>
     </div>
 </header>

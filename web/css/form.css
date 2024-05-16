@@ -23,3 +23,26 @@ label {
 .form-check > * {
     cursor: pointer;
 }
+
+.iti {
+    display: block !important;
+}
+
+.input-group-append {
+    position: relative;
+    margin-left: -1px;
+    display: flex;
+}
+
+.input-group-text {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}

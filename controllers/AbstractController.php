@@ -6,6 +6,7 @@ use app\widgets\ActiveForm;
 use Yii;
 use yii\base\ExitException;
 use yii\base\Model;
+use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\Response;
 

@@ -2,7 +2,11 @@
 
 namespace app\widgets;
 
+use app\assets\PasswordInputAsset;
+use Yii;
+use yii\bootstrap5\BaseHtml;
 use yii\helpers\Html;
+use yii\helpers\Json;
 use yii\web\JsExpression;
 use yii\widgets\ActiveForm;
 
@@ -66,5 +70,44 @@ JS,
         );
 
         return $this->widget(Select2::class, $options);
+    }
+
+    public function passwordInput($options = []): static
+    {
+        $view = $this->form->getView();
+
+        PasswordInputAsset::register($view);
+
+        $id = BaseHtml::getInputId($this->model, $this->attribute);
+
+        $pluginOptions = $options['pluginOptions'] ?? [];
+        $pluginOptions['clientValidation'] = $pluginOptions['clientValidation'] ?? false;
+
+        // Client validation (JS)
+        if ($pluginOptions['clientValidation']) {
+            $pluginOptions['messages']['validationCases'] = [
+                'lowercase' => Yii::t('app', 'Строчную букву') . ' - abc',
+                'uppercase' => Yii::t('app', 'Заглавную букву') . ' - ABC',
+                 'symbol' => Yii::t('app', 'Спец. символ') . ' - @!?',
+                'number' => Yii::t('app', 'Цифру'),
+                'length' => Yii::t('app', '8 символов'),
+            ];
+            $pluginOptions['messages']['validationError'] = Yii::t('app', 'Должны быть соблюдены все правила');
+            $pluginOptions['messages']['validationTip'] = Yii::t('app', 'Пароль должен содержать') . ':';
+        }
+
+        $pluginOptions = Json::encode($pluginOptions);
+
+        if ($this->attribute != 'password') {
+            $options['autocomplete'] = 'new-password';
+        }
+
+        $view->registerJs(
+            <<<JS
+            \$('#$id').password($pluginOptions);
+        JS,
+        );
+
+        return parent::passwordInput($options);
     }
 }

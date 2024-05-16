@@ -21,9 +21,9 @@ $config = [
             'enableCookieValidation' => false,
         ],
         'user' => [
-            'identityClass' => '\yii\web\User',
-            'enableAutoLogin' => false,
-            'enableSession' => false,
+            'identityClass' => 'app\models\User',
+            'enableAutoLogin' => true,
+            'enableSession' => true,
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',

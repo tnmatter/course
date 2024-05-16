@@ -2,6 +2,8 @@
 
 namespace app\helpers;
 
+use Random\Engine\Mt19937;
+
 class HStrings
 {
     public static function pluralForm(int $num, string $singleForm, string $dualForm, string $pluralForm): string
@@ -35,5 +37,11 @@ class HStrings
             return trim(mb_substr($text, 0, $maxLength - 3)) . '...';
         }
         return $text;
+    }
+
+    public static function randomString(int $length): string
+    {
+        $str = random_bytes($length);
+        return substr(base64_encode($str), 0, $length);
     }
 }

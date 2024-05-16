@@ -18,10 +18,13 @@ class m240515_203528_all extends Migration
                 'id' => $this->primaryKey(),
                 'name' => $this->string(255)->notNull(),
                 'phone' => $this->string(15)->notNull(),
+                'auth_key' => $this->string(64)->notNull(),
+                'password_hash' => $this->string()->notNull(),
                 'created_at' => $this->timestamp(0)->notNull()->defaultExpression('now()'),
                 'updated_at' => $this->timestamp(0)->notNull()->defaultExpression('now()')
             ]
         );
+        $this->createIndex('user_phone_idx', 'user', ['phone'], true);
         $this->createTable(
             'product',
             [
