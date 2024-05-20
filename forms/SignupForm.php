@@ -2,6 +2,7 @@
 
 namespace app\forms;
 
+use app\helpers\HDates;
 use app\models\User;
 use borales\extensions\phoneInput\PhoneInputValidator;
 use Yii;
@@ -66,7 +67,7 @@ class SignupForm extends Model
                 'password_hash' => password_hash(md5($this->password), PASSWORD_DEFAULT),
             ]);
             if ($user->save()) {
-                Yii::$app->user->login($user);
+                Yii::$app->user->login($user, HDates::MONTH);
                 return true;
             } else {
                 foreach (['name', 'phone'] as $attr) {

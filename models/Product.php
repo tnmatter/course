@@ -3,7 +3,6 @@
 namespace app\models;
 
 use app\db\AbstractPgModel;
-use app\validators\TypeValidator;
 use DateTimeImmutable;
 use Yii;
 
@@ -27,9 +26,10 @@ class Product extends AbstractPgModel
     {
         return [
             [['name', 'count'], 'required'],
-            [['name', 'avatar'], 'string', 'max' => 255],
-            [['created_at', 'updated_at'], TypeValidator::class, 'type' => DateTimeImmutable::class],
-            [['count'], 'integer', 'min' => 0]
+            [['name'], 'string', 'max' => 255],
+            [['description', 'avatar'], 'string'],
+            [['avatar'], 'url'],
+            [['count'], 'integer', 'min' => 0],
         ];
     }
 
@@ -37,20 +37,12 @@ class Product extends AbstractPgModel
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'name' => Yii::t('app', 'Товар'),
+            'name' => Yii::t('app', 'Название'),
             'description' => Yii::t('app', 'Описание'),
             'count' => Yii::t('app', 'Количество'),
-            'avatar' => Yii::t('app', 'Фото'),
+            'avatar' => Yii::t('app', 'Картинка'),
             'created_at' => Yii::t('app', 'Создан'),
             'updated_at' => Yii::t('app', 'Обновлен'),
-        ];
-    }
-
-    public function getDateTimeFieldsType(): array
-    {
-        return [
-            'created_at' => [DateTimeImmutable::class, self::PROPERTY_DATETIME_FORMAT],
-            'updated_at' => [DateTimeImmutable::class, self::PROPERTY_DATETIME_FORMAT],
         ];
     }
 }

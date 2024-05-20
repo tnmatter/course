@@ -24,7 +24,9 @@ use yii\db\ActiveQuery;
  * @property DateTimeImmutable|null $delivered_at
  * @property string|null $feedback
  * @property int|null $feedback_assessment
+ *
  * @property User $courier
+ * @property OrderProduct[] $orderProducts
  * @property string $customerPhoneHtml
  */
 class Order extends AbstractPgModel
@@ -38,7 +40,8 @@ class Order extends AbstractPgModel
     {
         return [
             [['customer_name', 'customer_phone', 'address', 'deliver_from', 'deliver_to'], 'required'],
-            [['customer_name', 'address'], 'string', 'max' => 255],
+            [['address'], 'string'],
+            [['customer_name'], 'string', 'max' => 255],
             [['customer_phone'], PhoneInputValidator::class],
             [['deliver_from', 'deliver_to', 'delivered_at'], TypeValidator::class, 'type' => DateTimeImmutable::class],
             [['deliver_from'], $this->validateDeliverTime(...)],
@@ -97,6 +100,11 @@ class Order extends AbstractPgModel
     public function getCourier(): ActiveQuery
     {
         return $this->hasOne(User::class, ['id' => 'courier_id']);
+    }
+
+    public function getOrderProducts(): ActiveQuery
+    {
+        return $this->hasMany(OrderProduct::class, ['order_id' => 'id']);
     }
 
     public function getCustomerPhoneHtml(): string

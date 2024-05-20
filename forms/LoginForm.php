@@ -2,6 +2,7 @@
 
 namespace app\forms;
 
+use app\helpers\HDates;
 use app\models\User;
 use borales\extensions\phoneInput\PhoneInputValidator;
 use Yii;
@@ -35,7 +36,7 @@ class LoginForm extends Model
             $user = User::findOne(['phone' => $this->phone]);
             if ($user) {
                 if ($user->validatePassword($this->password)) {
-                    Yii::$app->user->login($user);
+                    Yii::$app->user->login($user, HDates::MONTH);
                     return true;
                 }
             }

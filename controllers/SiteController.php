@@ -8,6 +8,7 @@ use app\forms\SignupForm;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Response;
+use yii\web\UnauthorizedHttpException;
 
 class SiteController extends AbstractController
 {
@@ -25,6 +26,11 @@ class SiteController extends AbstractController
                 ],
             ],
         ];
+    }
+
+    public function handleUnauthorizedException(UnauthorizedHttpException $e): bool
+    {
+        return true;
     }
 
     public function actions(): array

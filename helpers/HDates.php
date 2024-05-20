@@ -36,6 +36,11 @@ class HDates
         return new DateTimeImmutable('now');
     }
 
+    public static function long(): string
+    {
+        return self::now()->format('Y-m-d H:i:s');
+    }
+
     public static function prettyUi(DateTimeInterface $time, bool $short = false): string
     {
         $now = new DateTimeImmutable(timezone: $time->getTimezone());

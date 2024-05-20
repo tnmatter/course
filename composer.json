@@ -18,7 +18,7 @@
     "irc": "ircs://irc.libera.chat:6697/yii",
     "source": "https://github.com/yiisoft/yii2"
   },
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "require": {
     "php": ">=8.2",
     "ext-ctype": "*",
@@ -30,7 +30,7 @@
     "kartik-v/yii2-widgets": ">=3.4.1",
     "borales/yii2-phone-input": "^0.3.0",
     "ext-zip": "*",
-    "tonisormisson/yii2-address-form": "*"
+    "unclead/yii2-multiple-input": "*"
   },
   "require-dev": {
     "yiisoft/yii2-debug": "~2.1.0",

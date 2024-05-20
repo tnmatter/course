@@ -3,9 +3,6 @@
 namespace app\models;
 
 use app\db\AbstractPgModel;
-use app\enum\OrderStatusEnum;
-use app\validators\TypeValidator;
-use borales\extensions\phoneInput\PhoneInputValidator;
 use DateTimeImmutable;
 use Yii;
 use yii\db\ActiveQuery;
@@ -15,6 +12,11 @@ use yii\db\ActiveQuery;
  * @property int $product_id
  * @property int $order_id
  * @property int $count
+ * @property DateTimeImmutable $created_at
+ * @property DateTimeImmutable $updated_at
+ *
+ * @property Product $product
+ * @property Order $order
  */
 class OrderProduct extends AbstractPgModel
 {
@@ -40,6 +42,25 @@ class OrderProduct extends AbstractPgModel
             'product_id' => Yii::t('app', 'Товар'),
             'order_id' => Yii::t('app', 'Заказ'),
             'count' => Yii::t('app', 'Количество'),
+            'created_at' => Yii::t('app', 'Создан'),
+            'updated_at' => Yii::t('app', 'Обновлен'),
         ];
+    }
+
+    public function afterSave($insert, $changedAttributes): void
+    {
+        $countDiff = $this->count - ($changedAttributes['count'] ?? $this->count);
+        $this->product->updateCounters(['count' => -$countDiff]);
+        parent::afterSave($insert, $changedAttributes);
+    }
+
+    public function getProduct(): ActiveQuery
+    {
+        return $this->hasOne(Product::class, ['id' => 'product_id']);
+    }
+
+    public function getOrder(): ActiveQuery
+    {
+        return $this->hasOne(Order::class, ['id' => 'order_id']);
     }
 }

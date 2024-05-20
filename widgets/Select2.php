@@ -12,11 +12,11 @@ class Select2 extends \kartik\select2\Select2
     public function init(): void
     {
         parent::init();
-        $value = $this->model?->{$this->attribute ?: ''} ?? null;
+        $value = $this->model?->{$this->attribute ?: ''} ?? $this->value;
         if ($this->model instanceof AbstractPgModel) {
-            $value = $this->model->getRawAttribute($this->attribute ?? '') ?? null;
+            $value = $this->model->getRawAttribute($this->attribute ?? '') ?? $this->value;
         }
-        if ($value && $this->initSelection) {
+        if ($value !== null && $this->initSelection) {
             if ($this->pluginOptions['ajax'] ?? null) {
                 $url = ($this->pluginOptions['ajax'] ?? [])['url'] ?? '';
                 $this->pluginOptions['initSelection'] = new JsExpression(

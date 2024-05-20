@@ -49,4 +49,13 @@ enum HEnum
         }
         return $result;
     }
+
+    public static function getCases(string $enumClass): array
+    {
+        $result = [];
+        if (is_subclass_of($enumClass, UnitEnum::class)) {
+            $result = array_map(fn(UnitEnum $e) => ($e instanceof BackedEnum ? $e->value : $e->name), $enumClass::cases());
+        }
+        return $result;
+    }
 }
