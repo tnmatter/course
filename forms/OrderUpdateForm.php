@@ -25,7 +25,7 @@ class OrderUpdateForm extends Model
     public string|null $status = null;
     public string|null $delivered_at = null;
     public string|null $feedback = null;
-    public int|null $feedback_assessment = null;
+    public string|null $feedback_assessment = null;
 
     /** @var OrderProduct[] $oldProducts */
     private array $oldProducts;
@@ -56,7 +56,7 @@ class OrderUpdateForm extends Model
             [['status'], 'in', 'range' => HEnum::getCases(OrderStatusEnum::class)],
             [['deliver_from'], $this->validateDates(...)],
             [['products'], $this->validateProducts(...)],
-            [['delivered_at'], 'datetime', 'format' => 'php:Y-m-d H:i:s'],
+            [['delivered_at'], 'datetime', 'format' => 'php:Y-m-d H:i'],
         ];
     }
 

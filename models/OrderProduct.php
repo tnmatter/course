@@ -49,7 +49,7 @@ class OrderProduct extends AbstractPgModel
 
     public function afterSave($insert, $changedAttributes): void
     {
-        $countDiff = $this->count - ($changedAttributes['count'] ?? $this->count);
+        $countDiff = $this->count - ($changedAttributes['count'] ?? ($insert ? 0 : $this->count));
         $this->product->updateCounters(['count' => -$countDiff]);
         parent::afterSave($insert, $changedAttributes);
     }

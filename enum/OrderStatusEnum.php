@@ -45,9 +45,9 @@ enum OrderStatusEnum: string
             self::Approved => [self::Approved, self::Collecting],
             self::Collecting => [self::Collecting, self::Delivering],
             self::Delivering => [self::Delivering, self::Delivered, self::Refunded],
-            self::Delivered => [],
-            self::Rejected => [],
-            self::Refunded => [],
+            self::Delivered => [self::Delivered],
+            self::Rejected => [self::Rejected],
+            self::Refunded => [self::Refunded],
             default => [$this],
         };
     }

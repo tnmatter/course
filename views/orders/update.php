@@ -112,7 +112,7 @@ JS,
                         <div class="col-12">
                             <?= $form->field($orderUpdateForm, 'status')->widget(
                                 Select2::class,
-                                ['data' => HEnum::getCasesList(OrderStatusEnum::class, withEmptyChoice: false)],
+                                ['data' => HEnum::getCasesList(OrderStatusEnum::class,OrderStatusEnum::tryFrom($orderUpdateForm->status)?->getAvailableStatuses(), withEmptyChoice: false)],
                             ); ?>
                         </div>
                         <div class="col-12">

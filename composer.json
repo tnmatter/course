@@ -26,11 +26,12 @@
     "ext-mbstring": "*",
     "yiisoft/yii2": ">=2.0.49.3",
     "yiisoft/yii2-bootstrap5": ">=2.0.4",
-    "bower-asset/font-awesome": ">=6.5",
+    "bower-asset/font-awesome": "*",
     "kartik-v/yii2-widgets": ">=3.4.1",
     "borales/yii2-phone-input": "^0.3.0",
     "ext-zip": "*",
-    "unclead/yii2-multiple-input": "*"
+    "unclead/yii2-multiple-input": "*",
+    "miloschuman/yii2-highcharts-widget": "*"
   },
   "require-dev": {
     "yiisoft/yii2-debug": "~2.1.0",

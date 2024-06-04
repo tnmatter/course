@@ -79,6 +79,19 @@ class Order extends AbstractPgModel
         ];
     }
 
+    public function afterSave($insert, $changedAttributes): void
+    {
+        if (isset($changedAttributes['status'])) {
+            if (in_array($this->status, [OrderStatusEnum::Rejected, OrderStatusEnum::Refunded])) {
+                foreach ($this->orderProducts as $orderProduct ) {
+                    $countDiff = $orderProduct->count;
+                    $orderProduct->product->updateCounters(['count' => $countDiff]);
+                }
+            }
+        }
+        parent::afterSave($insert, $changedAttributes);
+    }
+
     public function getFieldsEnum(): array
     {
         return [
