@@ -54,6 +54,24 @@ class ProductsController extends AbstractController
         throw new NotFoundHttpException();
     }
 
+    public function actionView(int $id): Response|string
+    {
+        $product = Product::findOne($id);
+        if ($product !== null) {
+            if ($product->load($this->request->post())) {
+                $this->performAjaxValidation($product);
+                if ($product->save()) {
+                    $this->setSaveFlash();
+                    return $this->redirect('/products');
+                } else {
+                    $this->setValidationFlash();
+                }
+            }
+            return $this->render('view', compact('product'));
+        }
+        throw new NotFoundHttpException();
+    }
+
     public function actionFilter(string|null $query = null, int|null $id = null): Response
     {
         $filter = new ProductsFilter(['search' => $query, 'id' => $id]);

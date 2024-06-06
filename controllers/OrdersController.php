@@ -53,4 +53,22 @@ class OrdersController extends AbstractController
         }
         throw new NotFoundHttpException();
     }
+
+    public function actionView(int $id): Response|string
+    {
+        $order = Order::findOne($id);
+        if ($order !== null) {
+            if ($order->load($this->request->post())) {
+                $this->performAjaxValidation($order);
+                if ($order->save()) {
+                    $this->setSaveFlash();
+                    return $this->redirect('/orders');
+                } else {
+                    $this->setValidationFlash();
+                }
+            }
+            return $this->render('view', compact('order'));
+        }
+        throw new NotFoundHttpException();
+    }
 }

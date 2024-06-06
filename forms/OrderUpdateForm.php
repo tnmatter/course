@@ -88,11 +88,11 @@ class OrderUpdateForm extends Model
             $changes = [];
             foreach ($this->products as $product) {
                 $oldProduct = $this->oldProducts[$product['product_id']] ?? null;
-                if ($oldProduct?->count !== $product['count']) {
+                if ($oldProduct === null || $oldProduct->count !== $product['count']) {
                     $changes[] = [
-                        'product_id' => $oldProduct->product_id,
-                        'count' => $product['count'] - $oldProduct->count,
-                        'new' => !$oldProduct,
+                        'product_id' => $oldProduct ? $oldProduct['product_id'] : $product['product_id'] ,
+                        'count' => $oldProduct ? $product['count'] - $oldProduct->count : $product['count'],
+                        'new' => $oldProduct === null,
                     ];
                 }
             }
@@ -177,7 +177,7 @@ class OrderUpdateForm extends Model
                 $products = HArray::index($this->products, 'product_id');
                 /** @var OrderProduct[] $existProducts */
                 $existProducts = OrderProduct::find()
-                    ->where(['product_id' => array_keys($products), 'order_id' => $this->order->id])
+                    ->where(['order_id' => $this->order->id])
                     ->indexBy('product_id')
                     ->all();
                 foreach ($products as $id => $product) {
@@ -189,6 +189,9 @@ class OrderUpdateForm extends Model
                         $this->addError('products', Yii::t('app', 'Некоторые товары неверны'));
                         return false;
                     }
+                }
+                foreach (array_diff_key($existProducts, $products) as $productToDelete) {
+                    $productToDelete->delete();
                 }
                 return true;
             } else {

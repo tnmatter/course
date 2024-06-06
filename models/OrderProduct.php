@@ -54,6 +54,12 @@ class OrderProduct extends AbstractPgModel
         parent::afterSave($insert, $changedAttributes);
     }
 
+    public function afterDelete(): void
+    {
+        $this->product->updateCounters(['count' => $this->count]);
+        parent::afterDelete();
+    }
+
     public function getProduct(): ActiveQuery
     {
         return $this->hasOne(Product::class, ['id' => 'product_id']);
